@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Monument 1",
+    "image": "img/monument1.jpg",
+    "price": "2500 грн"
+  },
+  {
+    "name": "Monument 2",
+    "image": "img/monument2.jpg",
+    "price": "3000 грн"
+  },
+  {
+    "name": "Monument 3",
+    "image": "img/monument3.jpg",
+    "price": "3000 грн"
+  },
+  {
+    "name": "Monument 4",
+    "image": "img/monument4.jpg",
+    "price": "3000 грн"
+  },
+  {
+    "name": "Monument 5",
+    "image": "img/monument5.jpg",
+    "price": "3000 грн"
+  },
+  {
+    "name": "Monument 6",
+    "image": "img/monument6.jpg",
+    "price": "3000 грн"
+  }
+]

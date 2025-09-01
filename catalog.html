@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог памʼятників — Памʼять назавжди</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <div
+          class="logo"
+          onclick="window.location.href='index.html'"
+          style="cursor: pointer"
+        >
+          <h1>Магазин</h1>
+        </div>
+
+        <div class="header-right">
+          <button id="toggle-form" aria-label="Зв'язатися">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.25a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.24 1.05l-2.2 2.2z"
+              />
+            </svg>
+          </button>
+
+          <div class="menu-wrapper">
+            <div
+              id="hamburger-btn"
+              aria-label="Відкрити меню"
+              role="button"
+              tabindex="0"
+            >
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+
+            <div id="menu-popup" aria-hidden="true">
+              <ul>
+                <li><a href="catalog.html">Каталог пам'ятників</a></li>
+                <li><a href="exhibition.html">Виставка</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Заголовок -->
+      <div class="full-width-header-wrapper scroll-animate">
+        <div class="full-width-header">Каталог</div>
+        <div class="underline"></div>
+      </div>
+
+      <!-- Основний контент -->
+      <main class="scroll-animate">
+        <section class="gallery">
+          <div class="gallery-item">
+            <div class="image-box">
+              <img src="img/monument1.jpg" alt="Памʼятник 1" />
+            </div>
+            <div class="item-title">Памʼятник з граніту, модель A1</div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="image-box">
+              <img src="img/monument2.jpg" alt="Памʼятник 2" />
+            </div>
+            <div class="item-title">Памʼятник з гравіюванням, модель B2</div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="image-box">
+              <img src="img/monument3.jpg" alt="Памʼятник 3" />
+            </div>
+            <div class="item-title">Мінімалістичний памʼятник, модель C3</div>
+          </div>
+
+          <!-- Додай більше елементів за потреби -->
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Магазин</h3>
+            <address>
+              м. Київ, вул. Пам’яті, 10<br />
+              <a
+                href="tel:+380961234567"
+                id="phone-link"
+                class="phone-link-modal"
+                >+38 (096) 123 45 67</a
+              ><br />
+              Email: info@pamjatka.ua
+            </address>
+          </div>
+
+          <div class="footer-right">
+            <h3>Залишити заявку</h3>
+            <br />
+            <form id="footer-contact-form">
+              <input type="text" name="name" placeholder="Ім'я" required />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Номер телефону"
+                required
+              />
+              <textarea name="message" placeholder="Повідомлення"></textarea>
+              <button type="submit" id="submit-button">Відправити</button>
+            </form>
+          </div>
+        </div>
+
+        <p class="footer-bottom-text">© 2025 Памʼять. Всі права захищено.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
