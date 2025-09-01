@@ -1,45 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggleBtn = document.getElementById('toggle-form')
+  const buttons = document.querySelectorAll('.scroll-btn')
   const contactForm = document.getElementById('footer-contact-form')
   const phoneLinks = document.querySelectorAll('.phone-link-modal') // всі номери
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', (e) => {
-      e.preventDefault()
+  if (buttons && buttons.length > 0) {
+    buttons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault()
 
-      const isMobile = window.innerWidth <= 768
+        const isMobile = window.innerWidth <= 768
 
-      if (contactForm) {
-        contactForm.scrollIntoView({ behavior: 'smooth' })
-      }
+        if (contactForm) {
+          contactForm.scrollIntoView({ behavior: 'smooth' })
+        }
 
-      if (isMobile && phoneLinks.length > 0) {
-        // Створюємо список номерів у модалці
-        let phonesHTML = ''
-        phoneLinks.forEach((link) => {
-          const phoneNumber = link.getAttribute('href').replace('tel:', '')
-          const phoneDisplay = link.textContent.trim()
-          phonesHTML += `<a href="tel:${phoneNumber}" class="phone-link-modal">${phoneDisplay}</a><br/>`
-        })
+        if (isMobile && phoneLinks.length > 0) {
+          // Створюємо список номерів у модалці
+          let phonesHTML = ''
+          phoneLinks.forEach((link) => {
+            const phoneNumber = link.getAttribute('href').replace('tel:', '')
+            const phoneDisplay = link.textContent.trim()
+            phonesHTML += `<a href="tel:${phoneNumber}" class="phone-link-modal">${phoneDisplay}</a><br/>`
+          })
 
-        let modal = document.createElement('div')
-        modal.classList.add('phone-modal')
+          let modal = document.createElement('div')
+          modal.classList.add('phone-modal')
 
-        modal.innerHTML = `
+          modal.innerHTML = `
         <div class="phone-modal-content">
           <p>Зателефонуйте нам:</p>
           ${phonesHTML}
         </div>
       `
 
-        document.body.appendChild(modal)
+          document.body.appendChild(modal)
 
-        modal.addEventListener('click', (event) => {
-          if (event.target === modal) {
-            document.body.removeChild(modal)
-          }
-        })
-      }
+          modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+              document.body.removeChild(modal)
+            }
+          })
+        }
+      })
     })
   }
 
